@@ -1,7 +1,7 @@
 export const ContactForm = () => {
   return (
     <div className="space-y-6 py-8">
-      <h2 className="font-bold text-[#1E293B] text-xl md:text-2xl">
+      <h2 className="font-bold text-[#1E293B] text-lg sm:text-xl md:text-2xl text-center md:text-left">
         Explore More About Our App Feature
       </h2>
       <form name="contact" method="POST" data-netlify="true" className="space-y-4">
@@ -75,10 +75,10 @@ export const ContactForm = () => {
           />
         </div>
 
-        <div className="flex justify-end">
+        <div className="flex justify-center sm:justify-end">
           <button
             type="submit"
-            className="bg-[#A2C0E8] text-white font-medium px-8 py-2.5 rounded-xl hover:opacity-90 transition-opacity cursor-pointer"
+            className="w-full sm:w-auto bg-[#A2C0E8] text-white font-medium px-8 py-2.5 rounded-xl hover:opacity-90 transition-opacity cursor-pointer"
           >
             Send
           </button>
