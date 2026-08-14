@@ -1,31 +1,23 @@
-import cornerTopRight from './assets/corner-shape-top-right.png'
-import cornerBottomLeft from './assets/corner-shape-bottom-left.png'
 import { Navbar } from './components/Navbar'
 import { HeroSection } from './components/HeroSection'
-import { QrSection } from './components/QrSection'
 import { FeaturesSection } from './components/FeaturesSection'
 import { ContactForm } from './components/ContactForm'
 
 function App() {
   return (
-    <div className="relative overflow-hidden">
-      <img
-        src={cornerTopRight}
-        alt=""
-        className="absolute top-0 right-0 w-24 sm:w-32 md:w-56 h-auto pointer-events-none select-none z-0"
+    <div className="relative min-h-screen overflow-hidden bg-[#0B0F19] text-white">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 top-0 z-0 h-[900px] bg-[url('/assets/gradient.png')] bg-[length:100%_auto] bg-top bg-no-repeat sm:h-[1050px] lg:h-[1200px]"
       />
-      <img
-        src={cornerBottomLeft}
-        alt=""
-        className="absolute bottom-0 left-0 w-20 sm:w-28 md:w-44 h-auto pointer-events-none select-none z-0"
-      />
-      <Navbar />
+      <div className="relative z-10">
+        <Navbar />
 
-      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 pt-20 sm:pt-24 md:pt-28 pb-24 sm:pb-28 md:pb-8">
-        <HeroSection />
-        <QrSection />
-        <FeaturesSection />
-        <ContactForm />
+        <main className="mx-auto flex w-full max-w-6xl flex-col gap-16 px-4 pb-20 pt-6 sm:px-6 sm:pt-10 lg:gap-20 lg:px-8 lg:pt-14">
+          <HeroSection />
+          <FeaturesSection />
+          <ContactForm />
+        </main>
       </div>
     </div>
   )
