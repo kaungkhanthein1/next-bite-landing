@@ -40,3 +40,28 @@ img {
   background: rgba(249, 115, 22, 0.35);
   color: #fff;
 }
+
+/* Warm-to-dark hero glow, layered radial blobs over a vertical fade.
+   Mirrors the Figma background: bright orange near the logo/hero,
+   a second warm patch near the loyalty phones, fading to the page's
+   dark navy by the QR / CTA sections. */
+.page-gradient {
+  background-color: #0b0f19;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-image:
+    radial-gradient(1100px 680px at 10% 4%, rgba(255, 133, 51, 0.55), transparent 60%),
+    radial-gradient(900px 620px at 84% 16%, rgba(216, 79, 24, 0.4), transparent 62%),
+    radial-gradient(820px 600px at 20% 47%, rgba(180, 60, 20, 0.24), transparent 65%),
+    linear-gradient(
+      180deg,
+      #2c1407 0%,
+      #37190a 9%,
+      #2b1712 22%,
+      #1d1420 38%,
+      #131424 54%,
+      #0d1020 70%,
+      #0b0f19 88%,
+      #0b0f19 100%
+    );
+}
